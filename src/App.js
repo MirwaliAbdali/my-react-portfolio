@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import About from "./components/About";
+import Achievements from "./components/Achievements";
+import Contact from "./components/Contact";
+import Experience from "./components/Experience";
+import Header from "./components/Header";
+import Languages from "./components/Languages";
+import Projects from "./components/Projects";
+import Responsibilities from "./components/Responsibilities";
+import Skills from "./components/Skills";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <About id="about" />
+      <Languages id="languages" />
+      <Experience id="experience" />
+      <Skills id="skills" />
+      <Achievements id="achievements" />
+      <Projects id="projects" />
+      <Responsibilities id="responsibilities" />
+      <Contact id="contact" />
     </div>
   );
 }
 
-export default App;
+export function Button({ children }) {
+  return <button id="btn">{children}</button>;
+}
