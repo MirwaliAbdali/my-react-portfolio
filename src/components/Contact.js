@@ -4,44 +4,44 @@ function Contact() {
   // }
   return (
     <footer>
-      <div class="container contact-container">
-        <div class="row justify-content-center">
-          <div class="col-md-6 contact-form">
-            <h2 class="title text-center">Contact Me</h2>
+      <div className="container contact-container">
+        <div className="row justify-content-center">
+          <div className="col-md-6 contact-form">
+            <h2 className="title text-center">Contact Me</h2>
             <h4 className="sub-title text-center mb-4">Let's Work Together</h4>
-            <div class="card contact-card">
-              <div class="card-body">
+            <div className="card contact-card">
+              <div className="card-body">
                 <form>
-                  <div class="mb-3">
-                    <label for="name" class="form-label text-white">
+                  <div className="mb-3">
+                    <label htmlFor="name" className="form-label text-white">
                       Your Name
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="name"
                       placeholder="Enter your name"
                       required
                     />
                   </div>
-                  <div class="mb-3">
-                    <label for="email" class="form-label text-white">
+                  <div className="mb-3">
+                    <label htmlFor="email" className="form-label text-white">
                       Your Email
                     </label>
                     <input
                       type="email"
-                      class="form-control"
+                      className="form-control"
                       id="email"
                       placeholder="Enter your email"
                       required
                     />
                   </div>
-                  <div class="mb-3">
-                    <label for="message" class="form-label text-white">
+                  <div className="mb-3">
+                    <label htmlFor="message" className="form-label text-white">
                       Your Message
                     </label>
                     <textarea
-                      class="form-control"
+                      className="form-control"
                       id="message"
                       rows="5"
                       placeholder="Enter your message"

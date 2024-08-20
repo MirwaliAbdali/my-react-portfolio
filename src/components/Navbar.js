@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-scroll";
 import menuIcon from "../images/menu.svg";
 import closeIcon from "../images/close-menu.svg";
@@ -15,28 +15,64 @@ function Navbar() {
     setMenuOpen(false);
   }
 
-  const changeNavBg = () => {
-    if (window.scrollY >= 100) {
-      setScrollNav(true);
-    } else {
-      setScrollNav(false);
-    }
-  };
+  const navbarRef = useRef(null);
+  let lastScrollTop = 0;
 
   useEffect(() => {
-    window.addEventListener("scroll", changeNavBg);
+    const handleScroll = () => {
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
 
+      if (scrollTop === 0) {
+        navbarRef.current.style.backgroundColor = "transparent";
+        navbarRef.current.style.transition = ".9s";
+      }
+      if (scrollTop > lastScrollTop) {
+        navbarRef.current.classList.add("hide");
+        navbarRef.current.style.transition = ".9s";
+        navbarRef.current.style.backgroundColor = "black";
+      } else {
+        navbarRef.current.classList.remove("hide");
+      }
+      lastScrollTop = scrollTop;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup function
     return () => {
-      window.removeEventListener("scroll", changeNavBg);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // return (
+  //   <nav ref={navbarRef} className="navbar">
+  //     {/* Your Navbar content */}
+  //   </nav>
+  // );
+
+  // const changeNavBg = () => {
+  //   if (window.scrollY >= 100) {
+  //     setScrollNav(true);
+  //   } else {
+  //     setScrollNav(false);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   window.addEventListener("scroll", changeNavBg);
+
+  //   return () => {
+  //     window.removeEventListener("scroll", changeNavBg);
+  //   };
+  // }, []);
+
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
 
   return (
-    <nav className={scrollNav ? "nav nav-active" : "nav"}>
+    <nav ref={navbarRef} className="nav">
       <h1 className="logo">
         <Link to="header" smooth={true} duration={300} onClick={closeMenuIcon}>
           Portfo<span className="logo-split">lio</span>

@@ -24,6 +24,7 @@ body {
   color: #5a3e2b;
   background: var(--bg-color);
   color: var(--text-color);
+  font-style: italic;
 }
 
 /* Header styling */
@@ -528,9 +529,18 @@ a {
   background: var(--main-color);
 }
 
+.hide {
+  background-color: var(--other-color);
+  transform: translateY(-100px);
+  transition: 0.9s;
+}
 /*  */
 .menu-icons {
-  width: 34px;
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  z-index: 1000;
+  width: 25px;
   cursor: pointer;
   display: none;
   transition: all 0.3s ease;
@@ -543,19 +553,15 @@ a {
 /* Responssiveness */
 
 @media screen and (max-width: 1200px) {
-  .header-info {
-    padding: 16% 4%;
-  }
-
   .nav {
-    padding: 18px 2% 0 2%;
+    padding: 18px 10% 12px 10%;
   }
 }
 @media (max-width: 1164px) {
   .nav-list {
     flex-direction: column;
     position: absolute;
-    top: 54px;
+    top: 0;
     right: 0;
     background-color: var(--other-color);
     width: 100%;
@@ -570,8 +576,6 @@ a {
 
   .nav {
     justify-content: space-between;
-    padding: 18px 4% 0 4%;
-    background-color: var(--other-color);
   }
 
   .nav-list li {
@@ -645,6 +649,14 @@ a {
     --p-font: 1rem;
   }
 
+  .nav {
+    padding: 18px 6% 12px 6%;
+  }
+
+  .header-info {
+    padding: 34% 6% 16% 6%;
+  }
+
   .header-title {
     font-size: 36px;
   }
@@ -676,6 +688,14 @@ a {
 
   .box {
     padding: 24px;
+  }
+
+  .contact-container {
+    padding: 0 24px;
+  }
+
+  .card-body {
+    padding: 0;
   }
 }
 
@@ -720,6 +740,11 @@ a {
 
   .sub-title {
     font-size: 18px;
+  }
+
+  #btn {
+    padding: 14px 16px;
+    font-size: 12px;
   }
 }
 
