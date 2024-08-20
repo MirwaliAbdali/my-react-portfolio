@@ -1,3 +1,4 @@
+import { Link } from "react-scroll";
 import { Button } from "../App";
 
 function About({ id }) {
@@ -38,7 +39,9 @@ function About({ id }) {
               </li>
             </ol>
           </div>
-          <Button>Contact Me</Button>
+          <Link className="link" to="contact" smooth={true} duration={300}>
+            <Button> Contact Me </Button>
+          </Link>{" "}
         </div>
       </div>
     </section>

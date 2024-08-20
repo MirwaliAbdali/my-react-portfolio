@@ -33,6 +33,7 @@ function Navbar() {
       } else {
         navbarRef.current.classList.remove("hide");
       }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       lastScrollTop = scrollTop;
     };
 
@@ -147,6 +148,18 @@ function Navbar() {
             onClick={closeMenuIcon}
           >
             Responsibilities
+          </Link>
+        </li>
+
+        <li>
+          <Link
+            className="link"
+            to="contact"
+            smooth={true}
+            duration={300}
+            onClick={closeMenuIcon}
+          >
+            Contact Me
           </Link>
         </li>
       </ul>

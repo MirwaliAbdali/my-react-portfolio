@@ -1,9 +1,9 @@
-function Contact() {
+function Contact({ id }) {
   // function handleSubmit(e) {
   //   e.preventDefault();
   // }
   return (
-    <footer>
+    <footer id={id}>
       <div className="container contact-container">
         <div className="row justify-content-center">
           <div className="col-md-6 contact-form">
