@@ -29,7 +29,10 @@ function Header() {
     <header className="header">
       <Navbar />
       <video autoPlay muted loop className="background-video">
-        <source src="/videos/header-bg-video.mp4" type="video/mp4" />
+        <source
+          src={`${process.env.PUBLIC_URL}/videos/header-bg-video.mp4`}
+          type="video/mp4"
+        />
         Your browser does not support the video tag.
       </video>
       <div className="header-info">
