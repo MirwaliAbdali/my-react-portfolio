@@ -4,7 +4,6 @@ import menuIcon from "../images/menu.svg";
 import closeIcon from "../images/close-menu.svg";
 
 function Navbar() {
-  const [scrollNav, setScrollNav] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   function toggleMenuIcon() {
@@ -44,32 +43,6 @@ function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  // return (
-  //   <nav ref={navbarRef} className="navbar">
-  //     {/* Your Navbar content */}
-  //   </nav>
-  // );
-
-  // const changeNavBg = () => {
-  //   if (window.scrollY >= 100) {
-  //     setScrollNav(true);
-  //   } else {
-  //     setScrollNav(false);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   window.addEventListener("scroll", changeNavBg);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", changeNavBg);
-  //   };
-  // }, []);
-
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
 
   return (
     <nav ref={navbarRef} className="nav">

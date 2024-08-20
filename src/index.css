@@ -560,6 +560,7 @@ a {
 @media (max-width: 1164px) {
   .nav-list {
     flex-direction: column;
+    padding-top: 4rem;
     position: absolute;
     top: 0;
     right: 0;
