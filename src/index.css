@@ -118,7 +118,7 @@ span {
 
 .nav-list .link:hover::before,
 .nav-list .link:hover::after {
-  width: 24px;
+  width: 34px;
 }
 
 .nav-list .link:hover {

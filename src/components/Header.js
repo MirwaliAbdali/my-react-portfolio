@@ -8,7 +8,7 @@ function Header() {
 
   useEffect(() => {
     const options = {
-      strings: ["I'm Mirwali<span> Abdali</span> Web Developer."],
+      strings: ["I'm Hazrat Ali<span> Neekzad</span> Web Developer."],
       typeSpeed: 180,
       backSpeed: 80,
       backDelay: 100,
@@ -28,14 +28,6 @@ function Header() {
   return (
     <header className="header">
       <Navbar />
-      {/* <video autoPlay muted loop className="background-video">
-        <source
-          src={`${process.env.PUBLIC_URL}/videos/header-bg-video.mp4`}
-          type="video/mp4"
-        />
-        Your browser does not support the video tag.
-      </video> */}
-
       <div className="header-info">
         <p className="hello">Hello</p>
         <h1 className="header-title" ref={typedElement}>
