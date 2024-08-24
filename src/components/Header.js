@@ -8,7 +8,7 @@ function Header() {
 
   useEffect(() => {
     const options = {
-      strings: ["I'm Mirwali<span> Abdali</span> Web Developer."],
+      strings: ["I'm Hazrat Ali<span> Neekzad</span> Web Developer."],
       typeSpeed: 180,
       backSpeed: 80,
       backDelay: 100,
